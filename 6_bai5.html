@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var ngay,thang,nam;
+        ngay=prompt("Nhập ngày:");
+        thang=prompt("Nhập tháng: ");
+        nam = prompt("Nhập năm");
+        ngay=parseInt(this.ngay);
+        thang = parseInt(this.thang);
+        nam = parseInt(this.nam);
+        if (ngay>9 && thang>9)
+        document.write(ngay+"-"+thang+"-"+nam)
+        else if (ngay > 9) document.write(ngay+"-0"+thang+"-"+nam)
+        else if (thang>9) document.write("0"+ngay+"-"+thang+"-"+nam);
+    </script>
+</body>
+</html>
