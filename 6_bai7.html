@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        var money,lai,nam;
+        money=prompt("Nhập số tiền cần  gửi: (triệu đồng)");
+        lai=prompt("Nhập số tiền lãi: (%)");
+        nam=prompt("Nhập số năm cần gửi: ");
+        money=parseFloat(this.money);
+        lai=parseFloat(this.lai);
+        nam=parseInt(this.nam);
+        var Tong=money+nam*lai;
+        document.write("Tổng số tiền lãi của "+nam+" năm là: "+Tong+"( triệu đồng)");
+    </Script>
+</body>
+</html>
