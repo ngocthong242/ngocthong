@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Phy,Che,Bio;
+
+        Phy=prompt("Nhập điểm Vật Lý: ");
+        Che=prompt("Nhập điểm Hóa: ");
+        Bio=prompt("Nhập điển Sinh học: ");
+        let Phys=parseFloat(Phy);
+        let Chem=parseFloat(Che);
+        let Biol=parseFloat(Bio);
+
+        var AVG=(Phys+Chem+Biol)/3;
+        //AVG=parseFloat(AVG);
+        
+        document.write("Điểm trung bình 3 môn là: "+AVG);
+        
+    </script>
+</body>
+</html>
