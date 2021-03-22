@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Nhập cân nặng(kg):
+    <input type="number" id="weight" />
+    <br />
+
+    Nhập chiều cao(cm):
+    <input type="number" id="hight" />
+    <br />
+    <input type="button" id="test" value="kiểm tra" />
+
+    <script>
+      let Test = document.getElementById("test");
+      Test.addEventListener("click", function () {
+        let Weight = document.getElementById("weight").value;
+        let Hight = document.getElementById("hight").value;
+        Weight *= 1;
+        Hight *= 1;
+        Hight /= 100;
+        let bmi = Weight / (Hight * Hight);
+        if (bmi < 16) document.write("Gầy độ III");
+        else if ((bmi < 17)&&(bmi>=16)) document.write("Gầy độ II");
+        else if ((bmi < 18.5)&&(bmi>=17)) document.write("Gầy độ I");
+        else if ((bmi < 25)&&(bmi>=18.5)) document.write("Bình thường");
+        else if (bmi>=25) document.write("Thừa cân");
+      });
+    </script>
+  </body>
+</html>
