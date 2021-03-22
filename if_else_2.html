@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        Số a: <input type="number" id="so_a">
+
+        <br>
+        Số b: <input type="number" id="so_b">
+        <br>
+        <input type="button" id="test" value="Kiểm tra">
+        <br>
+        <p id="display"></p>
+    <script>
+        let Test=document.getElementById('test');
+            Test.addEventListener('click',function()
+        {
+            let a=document.getElementById('so_a').value;
+            let b=document.getElementById('so_b').value;
+            a*=1;
+            b*=1;
+            let s=a+b;
+            let as="";
+            if ((a+b)<4) as='Below';
+            else as='Oves';
+            let Display=document.getElementById('display').innerText = as;
+        })
+    </script>
+</body>
+</html>
