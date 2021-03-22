@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <b>
+        “What is the “official” name of JavaScript?”. 
+
+    </b>
+    <input type="text" id="traloi">
+    <input type="button" id="test" value="Kiểm tra">
+    <br>
+
+    <p id="display"> a</p>
+    <script>
+        let Test=document.getElementById('test');
+        Test.addEventListener('click',function()
+        {
+            let a;
+            let aw=document.getElementById('traloi').value;
+            if (aw=="ECMAScript")  a="Right";
+            else a="False";
+            let ktra=document.getElementById('display').innerText=a;
+            
+
+        }
+        )
+        
+        
+    </script>
+</body>
+</html>
