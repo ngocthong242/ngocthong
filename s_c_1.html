@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset style="width: 30%;">
+    <form action="">
+        Tháng: <input type="number" id="month">
+        <br>
+        Năm: <input type="number" id="year">
+        <input type="button" value="Kiểm tra" id="test">
+        <p id="display">Kiểm tra xem tháng có bao nhiêu ngày</p>
+    </form></fieldset>
+    <script>
+        let Test = document.getElementById('test');
+        Test.addEventListener('click',function()
+        {
+            let Month=document.getElementById('month').value;
+            let Year=document.getElementById('year').value;
+            Month*=1;
+            Year*=1;
+            let ketqua;
+            switch (Month)
+            {
+                case 1:
+                case 3: 
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                {
+                    ketqua=document.getElementById('display').innerText="Tháng "+Month+" có 31 ngày";
+                    break;
+            }
+                case 2:
+                    {
+                        if (((Year % 4 == 0) && (Year % 100 != 0)) || (Year % 400 == 0)) 
+                            ketqua=document.getElementById('display').innerText="Tháng "+Month+" có 29 ngày";
+                        else ketqua=document.getElementById('display').innerText="Tháng "+Month+" có 28 ngày";
+                        break;
+                    }
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    {
+                        ketqua=document.getElementById('display').innerText="Tháng "+Month+" có 30 ngày";
+                        break;
+                    }
+            }
+        })
+    </script>
+</body>
+</html>
