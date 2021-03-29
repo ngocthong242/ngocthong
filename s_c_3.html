@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính điểm thi Đại học</title>
+  </head>
+  <body>
+    <h1>Tính điểm ĐH khối D</h1>
+    <form>
+      Môn Toán <input type="number" id="diemToan" />
+      <br />
+      Môn Văn <input type="number" id="diemVan" />
+      <br />
+      Môn Anh <input type="number" id="diemAnh" />
+      <br />
+      Khu vực
+      <select id="khu_vuc">
+        <option>KV1</option>
+        <option>KV2</option>
+        <option>KV2-NT</option>
+        <option>KV3</option>
+      </select>
+      <br />
+      <input type="button" value="Tính điểm" id="tinh_diem" />
+    </form>
+    <font color="red" size="5,5px">Tổng điểm ĐH khối D của bạn là: </font>
+    <p id="ket_qua"></p>
+    <script>
+      document
+        .getElementById("tinh_diem")
+        .addEventListener("click", function () {
+          let Toan = document.getElementById("diemToan").value;
+          let Van = document.getElementById("diemVan").value;
+          let Anh = document.getElementById("diemAnh").value;
+          Toan *= 1;
+          Van *= 1;
+          Anh *= 1;
+          var tong_diem = 0;
+          tong_diem = Toan + Van + Anh;
+          let Display;
+          var KV = document.getElementById("khu_vuc").value;
+          switch (KV) {
+            case "KV1":
+              tong_diem += 0.75;
+              Display = document.getElementById(
+                "ket_qua"
+              ).innerText = tong_diem;
+              break;
+            case "KV2":
+              tong_diem += 0.25;
+              Display = document.getElementById(
+                "ket_qua"
+              ).innerText = tong_diem;
+              break;
+            case "KV2-NT":
+              tong_diem += 0.5;
+              Display = document.getElementById(
+                "ket_qua"
+              ).innerText = tong_diem;
+              break;
+            case "KV3":
+              tong_diem += 0;
+              Display = document.getElementById(
+                "ket_qua"
+              ).innerText = tong_diem;
+              break;
+          }
+        });
+    </script>
+  </body>
+</html>
